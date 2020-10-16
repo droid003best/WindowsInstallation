@@ -70,8 +70,4 @@ echo oLink.Save >> CreateShortcut.vbs
 cscript CreateShortcut.vbs
 del CreateShortcut.vbs
 
-
-
-pause
-
 exit
