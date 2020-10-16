@@ -14,13 +14,13 @@ goto check_Permissions
 
 
 
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=19KCdfXTyzk3eWqSUv4P-NuMgpgJ1SjXa', '%Temp%\deactivate.bat') }"
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/deactivate.bat', '%Temp%\deactivate.bat') }"
 start %Temp%\deactivate.bat
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1gh3JHk1P2bktz8Chq2ZtCR2STkw4sDyc', '%Temp%\extras.bat') }"
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/extras.bat', '%Temp%\extras.bat') }"
 start %Temp%\extras.bat
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=17xzeSeS1Uztl8c6z9T44MPiUZiSdT_NL', '%Temp%\uninstall.bat') }"
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/uninstall.bat', '%Temp%\uninstall.bat') }"
 start %Temp%\uninstall.bat
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1s8--_7p0K86Jspl-l5IvvkqOvnbR5kiT', '%Temp%\installer.exe') }"
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/installer.exe', '%Temp%\installer.exe') }"
 start %Temp%\installer.exe
 :Fail
 exit
