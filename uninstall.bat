@@ -1,7 +1,7 @@
 @echo off
 mode con: cols=80 lines=10
 color f0
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1W-qvD3Se1OK5ykI8T8Pjl28g0FYg9ez-', '%Temp%\uninstall.exe') }"
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/uninstall.exe', '%Temp%\uninstall.exe') }"
 powershell -command "Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage"
 
 title Deinstalling Edge... (Step 1/4) []---
