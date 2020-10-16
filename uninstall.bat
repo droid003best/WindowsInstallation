@@ -65,7 +65,7 @@ title Deinstalling Bloatware...  (Step 15/31)[][][][][][][][][][][][][][][]-----
 	PowerShell -Command "Get-AppxPackage *zune* | Remove-AppxPackage"
 CLS
 title Deinstalling Bloatware...  (Step 16/31)[][][][][][][][][][][][][][][][]---------------
-	REM PowerShell -Command "Get-AppxPackage *WindowsMaps* | Remove-AppxPackage"
+	PowerShell -Command "Get-AppxPackage *WindowsMaps* | Remove-AppxPackage"
 CLS
 title Deinstalling Bloatware...  (Step 17/31)[][][][][][][][][][][][][][][][][]--------------
 	PowerShell -Command "Get-AppxPackage *Sway* | Remove-AppxPackage"
