@@ -112,5 +112,6 @@ title Deinstalling Bloatware...  (Step 30/31)[][][][][][][][][][][][][][][][][][
 title Deinstalling Bloatware...  (Step 31/31)[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 	PowerShell -Command "Get-AppxPackage *Microsoft.Microsoft3DViewer* | Remove-AppxPackage"
 
+exit
 
 
