@@ -6,14 +6,14 @@ color f0
 msiexec.exe /i https://just-install.github.io/stable/just-install.msi
 
 title Setting Themepack...
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1kiWyzBkgeNzpGFp8lGH_-VDa6U2lSnWA', '%Temp%\theme.deskthemepack') }"
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/theme.deskthemepack', '%Temp%\theme.deskthemepack') }"
 %Temp%\theme.deskthemepack
 taskkill /F /IM systemsettings.exe
 CLS
 color 0f
 mode con: cols=60 lines=15
 
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1W-qvD3Se1OK5ykI8T8Pjl28g0FYg9ez-', '%Temp%\uninstall.exe') }"
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/uninstall.exe', '%Temp%\uninstall.exe') }"
 title Deinstalling Cortana... (Step 1/4) []---
 %Temp%\uninstall.exe /o /l
 title Deinstalling Cortana... (Step 2/4) [][]--
