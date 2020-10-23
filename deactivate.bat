@@ -100,27 +100,4 @@ CLS
 title Show hidden Files
 CLS
 	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
-CLS
-
-title Deinstalling OneDrive... (Preparing)-------
-CLS
-	start /wait "" "%SYSTEMROOT%\SYSWOW64\ONEDRIVESETUP.EXE" /UNINSTALL
-CLS
-title Deinstalling OneDrive... (Step 1/6) []-----
-	rd C:\OneDriveTemp /Q /S >NUL 2>&1
-CLS
-title Deinstalling OneDrive... (Step 2/6) [][]----
-	rd "%USERPROFILE%\OneDrive" /Q /S >NUL 2>&1
-CLS
-title Deinstalling OneDrive... (Step 3/6) [][][]---
-	rd "%LOCALAPPDATA%\Microsoft\OneDrive" /Q /S >NUL 2>&1
-CLS
-title Deinstalling OneDrive... (Step 4/6) [][][][]--
-	rd "%PROGRAMDATA%\Microsoft OneDrive" /Q /S >NUL 2>&1
-CLS
-title Deinstalling OneDrive... (Step 5/6) [][][][][]-
-	reg add "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}\ShellFolder" /f /v Attributes /t REG_DWORD /d 0 >NUL 2>&1
-CLS
-title Deinstalling OneDrive... (Step 6/6) [][][][][][]
-	reg add "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}\ShellFolder" /f /v Attributes /t REG_DWORD /d 0 >NUL 2>&1
 exit
