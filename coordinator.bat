@@ -23,8 +23,5 @@ start %Temp%\uninstall.bat
 
 powershell -command "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
 
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/installer.bat', '%Temp%\installer.bat') }"
-start %temp%\installer.bat
-
 :Fail
 exit
