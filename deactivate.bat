@@ -100,5 +100,18 @@ CLS
 	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
 	
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/installer.bat', '%Temp%\installer.bat') }"
-start %temp%\installer.bat
+
+:1
+timeout 1
+
+cd C:\ProgramData\chocolatey
+EXIST "choco.exe" (
+  goto 2
+) ELSE (
+  goto 1
+)
+
+:2
+choco install chrome
+pause
 exit
