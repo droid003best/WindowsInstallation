@@ -109,7 +109,9 @@ IF EXIST "choco.exe" (
 )
 
 :2
-choco install chrome
-choco install winrar
+choco install googlechrome -y
+choco install winrar -y
+choco install filezilla -y
+choco install vlc -y
 pause
 exit
