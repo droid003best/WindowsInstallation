@@ -25,20 +25,11 @@ CLS
 title Deinstalling Bloatware...  (Step 2/31) [][]-----------------------------
 	PowerShell -Command "Get-AppxPackage *Getstarted* | Remove-AppxPackage"
 CLS
-title Deinstalling Bloatware...  (Step 3/31) [][][]----------------------------
-	PowerShell -Command "Get-AppxPackage *WindowsAlarms* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 4/31) [][][][]---------------------------
-	PowerShell -Command "Get-AppxPackage *WindowsCamera* | Remove-AppxPackage"
-CLS
 title Deinstalling Bloatware...  (Step 5/31) [][][][][]--------------------------
 	PowerShell -Command "Get-AppxPackage *bing* | Remove-AppxPackage"
 CLS
 title Deinstalling Bloatware...  (Step 6/31) [][][][][][]-------------------------
 	PowerShell -Command "Get-AppxPackage *MicrosoftOfficeHub* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 7/31) [][][][][][][]------------------------
-	PowerShell -Command "Get-AppxPackage *OneNote* | Remove-AppxPackage"
 CLS
 title Deinstalling Bloatware...  (Step 8/31) [][][][][][][][]-----------------------
 	PowerShell -Command "Get-AppxPackage *people* | Remove-AppxPackage"
@@ -46,56 +37,20 @@ CLS
 title Deinstalling Bloatware...  (Step 9/31) [][][][][][][][][]----------------------
 	PowerShell -Command "Get-AppxPackage *WindowsPhone* | Remove-AppxPackage"
 CLS
-title Deinstalling Bloatware...  (Step 10/31)[][][][][][][][][][]---------------------
-	PowerShell -Command "Get-AppxPackage *photos* | Remove-AppxPackage"
-CLS
 title Deinstalling Bloatware...  (Step 11/31)[][][][][][][][][][][]--------------------
 	PowerShell -Command "Get-AppxPackage *SkypeApp* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 12/31)[][][][][][][][][][][][]-------------------
-	PowerShell -Command "Get-AppxPackage *solit* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 13/31)[][][][][][][][][][][][][]------------------
-	PowerShell -Command "Get-AppxPackage *WindowsSoundRecorder* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 14/31)[][][][][][][][][][][][][][]-----------------
-	PowerShell -Command "Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 15/31)[][][][][][][][][][][][][][][]----------------
-	PowerShell -Command "Get-AppxPackage *zune* | Remove-AppxPackage"
 CLS
 title Deinstalling Bloatware...  (Step 16/31)[][][][][][][][][][][][][][][][]---------------
 	PowerShell -Command "Get-AppxPackage *WindowsMaps* | Remove-AppxPackage"
 CLS
-title Deinstalling Bloatware...  (Step 17/31)[][][][][][][][][][][][][][][][][]--------------
-	PowerShell -Command "Get-AppxPackage *Sway* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 18/31)[][][][][][][][][][][][][][][][][][]-------------
-	PowerShell -Command "Get-AppxPackage *CommsPhone* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 19/31)[][][][][][][][][][][][][][][][][][][]------------
-	PowerShell -Command "Get-AppxPackage *ConnectivityStore* | Remove-AppxPackage"
-CLS
 title Deinstalling Bloatware...  (Step 20/31)[][][][][][][][][][][][][][][][][][][][]-----------
 	PowerShell -Command "Get-AppxPackage *Microsoft.Messaging* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 21/31)[][][][][][][][][][][][][][][][][][][][][]----------
-	PowerShell -Command "Get-AppxPackage *Facebook* | Remove-AppxPackage"
-CLS
-title Deinstalling Bloatware...  (Step 22/31)[][][][][][][][][][][][][][][][][][][][][][]---------
-	PowerShell -Command "Get-AppxPackage *Twitter* | Remove-AppxPackage"
 CLS
 title Deinstalling Bloatware...  (Step 23/31)[][][][][][][][][][][][][][][][][][][][][][][]--------
 	PowerShell -Command "Get-AppxPackage *Drawboard PDF* | Remove-AppxPackage"
 
 title Deinstalling Bloatware...  (Step 24/31)[][][][][][][][][][][][][][][][][][][][][][][][]-------
 	PowerShell -Command "Get-AppxPackage *Microsoft.XboxIdentityProvider* | Remove-AppxPackage"
-
-title Deinstalling Bloatware...  (Step 25/31)[][][][][][][][][][][][][][][][][][][][][][][][][]------
-	PowerShell -Command "Get-AppxPackage *Microsoft.XboxGamingOverlay* | Remove-AppxPackage"
-
-title Deinstalling Bloatware...  (Step 26/31)[][][][][][][][][][][][][][][][][][][][][][][][][][]-----
-	PowerShell -Command "Get-AppxPackage *Microsoft.Xbox.TCUI* | Remove-AppxPackage"
 
 title Deinstalling Bloatware...  (Step 27/31)[][][][][][][][][][][][][][][][][][][][][][][][][][][]----
 	PowerShell -Command "Get-AppxPackage *Microsoft.MSPaint* | Remove-AppxPackage"
@@ -112,6 +67,11 @@ title Deinstalling Bloatware...  (Step 30/31)[][][][][][][][][][][][][][][][][][
 title Deinstalling Bloatware...  (Step 31/31)[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 	PowerShell -Command "Get-AppxPackage *Microsoft.Microsoft3DViewer* | Remove-AppxPackage"
 
-exit
+cmd /k choco.exe
+choco install chrome
+choco install filezilla
+choco install winrar
+choco install vlc
+pause
 
 
