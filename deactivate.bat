@@ -112,8 +112,8 @@ IF EXIST "choco.exe" (
 
 :2
 choco install googlechrome -y
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar -y"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla -y"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc -y"
-pause
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar -y & exit"
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla -y & exit"
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc -y & exit"
+
 exit
