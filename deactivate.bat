@@ -97,7 +97,9 @@ title Deactivating additional Services... (Step 13/13)[][][][][][][][][][][][][]
 
 CLS
 	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
-	
+
+color 0f
+
 :1
 timeout 1
 
