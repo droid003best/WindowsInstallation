@@ -102,7 +102,7 @@ CLS
 timeout 1
 
 cd C:\ProgramData\chocolatey
-EXIST "choco.exe" (
+IF EXIST "choco.exe" (
   goto 2
 ) ELSE (
   goto 1
@@ -110,5 +110,6 @@ EXIST "choco.exe" (
 
 :2
 choco install chrome
+choco install winrar
 pause
 exit
