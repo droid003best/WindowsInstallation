@@ -94,13 +94,10 @@ title Deactivating additional Services... (Step 12/13)[][][][][][][][][][][][]-
 CLS
 title Deactivating additional Services... (Step 13/13)[][][][][][][][][][][][][]
 	REM sc config SysMain start= disabled
-exit
 
 CLS
 	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
 	
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/installer.bat', '%Temp%\installer.bat') }"
-
 :1
 timeout 1
 
