@@ -70,4 +70,25 @@ echo oLink.Save >> CreateShortcut.vbs
 cscript CreateShortcut.vbs
 del CreateShortcut.vbs
 
+color 0f
+title Installing Programms...
+
+:1
+timeout 5
+cls
+
+cd C:\ProgramData\chocolatey
+IF EXIST "choco.exe" (
+  goto 2
+) ELSE (
+  goto 1
+)
+
+:2
+
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar -y & exit"
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla -y & exit"
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc -y & exit"
+choco install googlechrome -y
+
 exit
