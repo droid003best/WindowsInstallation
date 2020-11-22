@@ -98,23 +98,5 @@ title Deactivating additional Services... (Step 13/13)[][][][][][][][][][][][][]
 CLS
 	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
 
-color 0f
-
-:1
-timeout 1
-
-cd C:\ProgramData\chocolatey
-IF EXIST "choco.exe" (
-  goto 2
-) ELSE (
-  goto 1
-)
-
-:2
-
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar -y & exit"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla -y & exit"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc -y & exit"
-choco install googlechrome -y
 
 exit
