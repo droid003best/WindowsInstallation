@@ -14,7 +14,7 @@ Features:
 2. Bloatware Deinstallation
 3. Additional Features Deactivation
 4. Windows Activation
-5. App Installation (Ninite)
+5. App Installation (Chocolatey)
 6. Costum Theme
 7. Costumized Taskbar
 8. Searchbar removed
@@ -23,7 +23,6 @@ Features:
 What to expect:
 1. Remove death Edge icon from Desktop
 2. Remove Cortana and Taskview icon from Taskbar
-3. Auto close Ninite installer
 4. Better GUI
 5. Auto enable RDP
 
