@@ -97,6 +97,11 @@ title Deactivating additional Services... (Step 13/13)[][][][][][][][][][][][][]
 
 CLS
 	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
+	
+title Deinstalling OneDrive...
+taskkill /f /im OneDrive.exe
+%SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall
+%SystemRoot%\System32\OneDriveSetup.exe /uninstall
 
 
 exit
