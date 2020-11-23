@@ -89,7 +89,7 @@ IF EXIST "choco.exe" (
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar -y & exit"
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla -y & exit"
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc -y & exit"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install google-drive-file-stream"
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install google-drive-file-stream -y"
 choco install googlechrome -y
 
 exit
