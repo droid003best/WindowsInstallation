@@ -4,7 +4,7 @@ color f0
 
 title Setting Themepack...
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/theme.deskthemepack', '%Temp%\theme.deskthemepack') }"
-%Temp%\theme.deskthemepack
+%Temp%\design.theme
 taskkill /F /IM systemsettings.exe
 CLS
 
