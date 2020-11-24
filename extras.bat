@@ -77,7 +77,6 @@ title Installing Programms...
 timeout 5
 cls
 
-cd C:\ProgramData\chocolatey
 IF EXIST "choco.exe" (
   goto 2
 ) ELSE (
@@ -90,6 +89,7 @@ start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar -y &
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla -y & exit"
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc -y & exit"
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install google-backup-and-sync -y"
-choco install googlechrome -y
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install googlechrome -y"
+
 
 exit
