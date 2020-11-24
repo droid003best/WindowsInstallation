@@ -1,9 +1,7 @@
 @echo off
 mode con: cols=90 lines=6
 color f0
-CLS
-title Disable Windows Featues... (Step 1/12) []-----------
-dism /Online /Disable-Feature /FeatureName:"Internet-Explorer-Optional-amd64" /NoRestart
+
 CLS
 title Disable Windows Featues... (Step 2/12) [][]----------
 dism /Online /Disable-Feature /FeatureName:"MediaPlayback" /NoRestart
