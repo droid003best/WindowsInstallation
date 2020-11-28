@@ -70,14 +70,15 @@ echo oLink.Save >> CreateShortcut.vbs
 cscript CreateShortcut.vbs
 del CreateShortcut.vbs
 
+reg.exe add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Personal /t REG_SZ /d "\\s4.boxsecured.ch\Share\Dokumente" /f
+
 color 0f
 title Installing Programms...
 
 cd C:\ProgramData\chocolatey\
 :1
-timeout 10
 cls
-
+timeout 5
 
 IF EXIST "choco.exe" (
   goto 2
