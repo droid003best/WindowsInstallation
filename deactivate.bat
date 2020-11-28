@@ -3,9 +3,6 @@ mode con: cols=90 lines=6
 color f0
 
 CLS
-title Disable Windows Featues... (Step 2/12) [][]----------
-dism /Online /Disable-Feature /FeatureName:"MediaPlayback" /NoRestart
-CLS
 title Disable Windows Featues... (Step 3/12) [][][]---------
 dism /Online /Disable-Feature /FeatureName:"Printing-Foundation-Features" /NoRestart
 CLS
@@ -37,10 +34,6 @@ title Disable Windows Featues... (Step 12/12)[][][][][][][][][][][][]
 dism /Online /Disable-Feature /FeatureName:"WindowsMediaPlayer" /NoRestart
 CLS
 
-
-CLS
-title Setting additional Features...
-CLS
 	REM 1 = This PC, 2 = Quick access
 CLS
 	REM reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
@@ -53,53 +46,32 @@ CLS
 
 
 
-title Deaktivating additional Services... (Step 1/13) []------------
+title Deaktivating additional Services...
 CLS
 	sc stop DiagTrack
-CLS
-title Deactivating additional Services... (Step 2/13) [][]-----------
 	sc stop diagnosticshub.standardcollector.service
-CLS
-title Deactivating additional Services... (Step 3/13) [][][]----------
 	sc stop dmwappushservice
-CLS
-title Deactivating additional Services... (Step 4/13) [][][][]---------
 	sc stop WMPNetworkSvc
-CLS
-title Deactivating additional Services... (Step 5/13) [][][][][]--------
 	sc stop WSearch
-CLS
-title Deactivating additional Services... (Step 6/13) [][][][][][]-------
 	sc config DiagTrack start= disabled
-CLS
-title Deactivating additional Services... (Step 7/13) [][][][][][][]------
 	sc config diagnosticshub.standardcollector.service start= disabled
-CLS
-title Deactivating additional Services... (Step 8/13) [][][][][][][][]-----
 	sc config dmwappushservice start= disabled
-CLS
-title Deactivating additional Services... (Step 9/13) [][][][][][][][][]----
 	REM sc config RemoteRegistry start= disabled
-CLS
-title Deactivating additional Services... (Step 10/13)[][][][][][][][][][]---
 	REM sc config TrkWks start= disabled
-CLS
-title Deactivating additional Services... (Step 11/13)[][][][][][][][][][][]--
 	sc config WMPNetworkSvc start= disabled
-CLS
-title Deactivating additional Services... (Step 12/13)[][][][][][][][][][][][]-
 	sc config WSearch start= disabled
-CLS
-title Deactivating additional Services... (Step 13/13)[][][][][][][][][][][][][]
 	REM sc config SysMain start= disabled
 
 CLS
-	reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t  REG_DWORD /d 0 /f
 	
 title Deinstalling OneDrive...
 taskkill /f /im OneDrive.exe
 %SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall
 %SystemRoot%\System32\OneDriveSetup.exe /uninstall
+rd “%UserProfile%\OneDrive” /Q /S
+rd “%LocalAppData%\Microsoft\OneDrive” /Q /S
+rd “%ProgramData%\Microsoft OneDrive” /Q /S
+rd “C:\OneDriveTemp” /Q /S
 
 
 exit
