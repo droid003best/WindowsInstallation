@@ -22,7 +22,6 @@ Features:
 
 What to expect:
 1. Remove death Edge icon from Desktop
-2. Remove Cortana and Taskview icon from Taskbar
 4. Better GUI
 5. Auto enable RDP
 
