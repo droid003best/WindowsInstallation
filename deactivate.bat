@@ -4,7 +4,7 @@ color f0
 
 CLS
 title Disable Windows Featues... (Step 2/12) [][]----------
-dism /online /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
+dism /online /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64 /NoRestart
 CLS
 title Disable Windows Featues... (Step 3/12) [][][]---------
 dism /Online /Disable-Feature /FeatureName:"Printing-Foundation-Features" /NoRestart
