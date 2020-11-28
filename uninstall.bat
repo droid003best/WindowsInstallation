@@ -50,7 +50,7 @@ title Deinstalling Bloatware...  (Step 23/31)[][][][][][][][][][][][][][][][][][
 	PowerShell -Command "Get-AppxPackage *Drawboard PDF* | Remove-AppxPackage"
 
 title Deinstalling Bloatware...  (Step 24/31)[][][][][][][][][][][][][][][][][][][][][][][][]-------
-	PowerShell -Command "Get-AppxPackage *Microsoft.XboxIdentityProvider* | Remove-AppxPackage"
+	PowerShell -Command "Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage"
 
 title Deinstalling Bloatware...  (Step 27/31)[][][][][][][][][][][][][][][][][][][][][][][][][][][]----
 	PowerShell -Command "Get-AppxPackage *Microsoft.MSPaint* | Remove-AppxPackage"
