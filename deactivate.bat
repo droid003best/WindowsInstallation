@@ -61,6 +61,13 @@ CLS
 	sc config WMPNetworkSvc start= disabled
 	sc config WSearch start= disabled
 	REM sc config SysMain start= disabled
+	
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /V ShowCortanaButton /T REG_DWORD /D 0 /F
+REG DELETE "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\MultiTaskingView\AllUpView" /V Enabled /F
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /V ShowTaskViewButton /T REG_DWORD /D 0 /F
+
+taskkill /f /im explorer.exe
+start explorer.exe
 
 CLS
 	
