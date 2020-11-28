@@ -3,8 +3,7 @@ mode con: cols=90 lines=6
 color f0
 
 title Setting Themepack...
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/design.theme', '%Temp%\design.theme') }"
-%Temp%\design.theme
+%Temp%\theme.deskthemepack
 taskkill /F /IM systemsettings.exe
 CLS
 
