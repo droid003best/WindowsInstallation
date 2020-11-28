@@ -3,6 +3,9 @@ mode con: cols=90 lines=6
 color f0
 
 CLS
+title Disable Windows Featues... (Step 2/12) [][]----------
+dism /online /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
+CLS
 title Disable Windows Featues... (Step 3/12) [][][]---------
 dism /Online /Disable-Feature /FeatureName:"Printing-Foundation-Features" /NoRestart
 CLS
