@@ -91,7 +91,7 @@ start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar -y &
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla -y & exit"
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc -y & exit"
 start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install google-backup-and-sync -y"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install googlechrome -y"
+start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install googlechrome -y & C:\Program Files\Google\Drive\googledrivesync.exe"
 
 
 exit
