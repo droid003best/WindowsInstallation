@@ -3,7 +3,7 @@ mode con: cols=90 lines=6
 color f0
 
 title Setting Themepack...
-%Temp%\theme.deskthemepack
+start %Temp%\theme.deskthemepack
 
 CLS
 
