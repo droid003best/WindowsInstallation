@@ -73,9 +73,11 @@ del CreateShortcut.vbs
 color 0f
 title Installing Programms...
 
+cd C:\ProgramData\chocolatey\
 :1
-timeout 5
+timeout 10
 cls
+
 
 IF EXIST "choco.exe" (
   goto 2
