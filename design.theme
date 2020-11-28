@@ -3,7 +3,7 @@
 [Theme]
 ; Windows - IDS_THEME_DISPLAYNAME_AERO
 DisplayName=design
-ThemeId={95D63B87-1669-4D38-A5CB-D961AF6C3E7E}
+ThemeId={DB53841C-982B-49FA-9601-BB3D79CAA1AE}
 
 ; Computer - SHIDI_SERVER
 [CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
@@ -41,11 +41,11 @@ Crosshair=
 IBeam=
 
 [Control Panel\Desktop]
-Wallpaper=%temp%\wallpaper.jpg
+Wallpaper=%USERPROFILE%\AppData\Local\Temp\wallpaper.jpg
 Pattern=
 MultimonBackgrounds=0
 PicturePosition=4
-WallpaperWriteTime=132506845120936578
+WallpaperWriteTime=132510332262383525
 
 [VisualStyles]
 Path=%SystemRoot%\resources\themes\Aero\Aero.msstyles
