@@ -1,4 +1,4 @@
-@echo off
+
 mode con: cols=90 lines=6
 color f0
 
@@ -75,24 +75,18 @@ taskkill /F /IM systemsettings.exe
 color 0f
 title Installing Programms...
 
-cd C:\ProgramData\chocolatey\
 :1
 cls
 timeout 5
-
 IF EXIST "choco.exe" (
-  goto 2
-) ELSE (
-  goto 1
+	  goto 2
+	) ELSE (
+	  goto 1
 )
 
 :2
-
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install winrar --y & exit"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install filezilla --y & exit"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install vlc --y & exit"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install google-drive-file-stream --y & exit"
-start cmd /k "cd C:\ProgramData\chocolatey\choco.exe & choco install googlechrome --y & exit"
-
+SCHTASKS /CREATE /SC DAILY /TN "Choco" /TR "%temp%/choco.bat"
+schtasks /run /TN "Choco"
+schtasks /delete /TN "Choco" /f
 
 exit
