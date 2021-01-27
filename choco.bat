@@ -28,8 +28,8 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------    
-start /min cmd /k "choco install winrar --y & exit"
-start /min cmd /k "choco install filezilla --y & exit"
-start /min cmd /k "choco install vlc --y & exit"
-start /min cmd /k "choco install google-drive-file-stream --y & exit"
-start /min cmd /k "choco install googlechrome --y & exit & del %appdata%\Microsoft\Windows\Start Menu\Programs\Startup\choco.bat"
+start cmd /k "choco install winrar --y & exit"
+start cmd /k "choco install filezilla --y & exit"
+start cmd /k "choco install vlc --y & exit"
+start cmd /k "choco install google-drive-file-stream --y & exit"
+start cmd /k "choco install googlechrome --y & exit & del %appdata%\Microsoft\Windows\Start Menu\Programs\Startup\choco.bat"
