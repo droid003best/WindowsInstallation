@@ -72,21 +72,3 @@ del CreateShortcut.vbs
 
 taskkill /F /IM systemsettings.exe
 
-color 0f
-title Installing Programms...
-
-:1
-cls
-timeout 5
-IF EXIST "choco.exe" (
-	  goto 2
-	) ELSE (
-	  goto 1
-)
-
-:2
-SCHTASKS /CREATE /SC DAILY /TN "Choco" /TR "%temp%/choco.bat"
-schtasks /run /TN "Choco"
-schtasks /delete /TN "Choco" /f
-
-exit
