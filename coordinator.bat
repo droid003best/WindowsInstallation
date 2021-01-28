@@ -19,5 +19,3 @@ SCHTASKS /RUN /TN "choco"
 SCHTASKS /DELETE /TN "choco" /f
 
 
-exit
-
