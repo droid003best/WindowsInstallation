@@ -3,17 +3,17 @@ mode con: cols=50 lines=2
 color f0
   cls
   echo Installing Chrome
-choco install googlechrome --y > %temp%\wSetup\chrome.txt
+choco install googlechrome --y
   cls
   echo Installing File Stream
-choco install google-drive-file-stream --y > %temp%\wSetup\drive.txt
+choco install google-drive-file-stream --y
   cls
   echo Installing FileZilla
-choco install filezilla --y > %temp%\wSetup\filezilla.txt
+choco install filezilla --y 
   cls
   echo Installing VLC
-choco install vlc --y > %temp%\wSetup\vlc.txt
+choco install vlc --y
   cls
   echo Installing WinRAR
-choco install winrar --y > %temp%\wSetup\winrar.txt
-start cmd /k "del %appdata%\Microsoft\Windows\Start Menu\Programs\Startup\choco.bat & exit"
+choco install winrar --y
+pause
