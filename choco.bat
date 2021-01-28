@@ -1,7 +1,6 @@
 @echo off
 mode con: cols=50 lines=2
 color f0
-if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
   cls
   echo Installing Chrome
 choco install googlechrome --y > %temp%\wSetup\chrome.txt
